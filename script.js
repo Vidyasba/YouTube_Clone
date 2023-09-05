@@ -89,4 +89,4 @@ searchButton.addEventListener("click",()=>{
     const searchValue= searchInput.value;
     fetchSearchResults(searchValue);
 });
-fetchSearchResults('');
+// fetchSearchResults();
