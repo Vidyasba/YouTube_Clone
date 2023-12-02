@@ -89,4 +89,31 @@ searchButton.addEventListener("click",()=>{
     const searchValue= searchInput.value;
     fetchSearchResults(searchValue);
 });
-// fetchSearchResults();
+fetchSearchResults();
+
+
+
+
+
+function toogleSideBar(){
+    var sidebar = document.getElementsByClassName('sidebar')[0];
+    console.log(sidebar)
+    // Toggle a class to show/hide the sidebar
+    sidebar.classList.toggle('show-sidebar'); 
+
+
+
+    var videoContainer = document.querySelector('.vidoes-container');
+
+    // Toggle classes on video container based on sidebar visibility
+    if (sidebar.classList.contains('show-sidebar')) {
+        videoContainer.classList.remove('show-sidebar-collapsed');
+        videoContainer.classList.add('show-sidebar-expanded');
+    } else {
+        videoContainer.classList.remove('show-sidebar-expanded');
+        videoContainer.classList.add('show-sidebar-collapsed');
+    }
+
+
+   
+}
